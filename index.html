@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwakar Mehndiratta - BCA Student | Aspiring Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-creative" aria-label="Diwakar Mehndiratta">
+                    <svg class="logo-svg" viewBox="0 0 160 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <defs>
+                            <linearGradient id="grad-main" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#6366f1"/>
+                                <stop offset="50%" stop-color="#8b5cf6"/>
+                                <stop offset="100%" stop-color="#06b6d4"/>
+                            </linearGradient>
+                            <linearGradient id="grad-accent" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" stop-color="#10b981"/>
+                                <stop offset="100%" stop-color="#06b6d4"/>
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+
+                        <!-- Hex badge -->
+                        <g transform="translate(4,4)">
+                            <polygon class="hex" points="20,0 40,12 40,36 20,48 0,36 0,12" fill="rgba(99,102,241,0.10)" stroke="rgba(99,102,241,0.35)" stroke-width="1.2"/>
+                            <!-- Rotating ring inside -->
+                            <g class="logo-ring" filter="url(#glow)">
+                                <circle cx="20" cy="24" r="18" fill="none" stroke="url(#grad-main)" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="20" cy="24" r="12" fill="none" stroke="url(#grad-accent)" stroke-width="1.5" opacity="0.7"/>
+                                <circle class="spark orbit-1" cx="20" cy="6" r="2" fill="#ffffff"/>
+                                <circle class="spark orbit-2" cx="38" cy="24" r="1.8" fill="#ffffff"/>
+                                <circle class="spark orbit-3" cx="20" cy="42" r="1.8" fill="#ffffff"/>
+                            </g>
+                            <!-- Monogram DM -->
+                            <g class="logo-dm" transform="translate(6,6)" fill="url(#grad-main)" stroke="url(#grad-main)" stroke-width="0.4">
+                                <path d="M8 6 h8 q10 0 10 12 q0 12 -10 12 h-8 z M12 12 v12 h2 q6 0 6 -6 q0 -6 -6 -6 z"/>
+                                <path d="M30 30 l0 -24 h6 l4 8 l4 -8 h6 l0 24 h-6 v-12 l-4 8 h-0.5 l-4 -8 v12 z"/>
+                            </g>
+                        </g>
+
+                        <!-- Nameplate -->
+                        <g transform="translate(68,10)">
+                            <rect x="0" y="0" rx="10" ry="10" width="88" height="28" fill="rgba(99,102,241,0.08)" stroke="rgba(99,102,241,0.25)"/>
+                            <text class="logo-name" x="10" y="19">Diwakar Mehndiratta</text>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Diwakar Mehndiratta</span>
+                    </h1>
+                    <h2 class="hero-subtitle">BCA Student | Aspiring Full Stack Developer</h2>
+                    <p class="hero-tagline">"Transforming ideas into code with creativity and logic"</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-image-container">
+                        <img src="images/DiwakarMehndiratta.jpg" alt="Diwakar Mehndiratta" class="profile-image">
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
+        </div>
+        <div class="hero-bg">
+            <div class="gradient-orb gradient-orb-1"></div>
+            <div class="gradient-orb gradient-orb-2"></div>
+            <div class="gradient-orb gradient-orb-3"></div>
+            
+            <!-- Floating Geometric Shapes -->
+            <div class="floating-shape shape-1" id="shape1"></div>
+            <div class="floating-shape shape-2" id="shape2"></div>
+            <div class="floating-shape shape-3" id="shape3"></div>
+            <div class="floating-shape shape-4" id="shape4"></div>
+            <div class="floating-shape shape-5" id="shape5"></div>
+            <div class="floating-shape shape-6" id="shape6"></div>
+            <div class="floating-shape shape-7" id="shape7"></div>
+            <div class="floating-shape shape-8" id="shape8"></div>
+            <div class="floating-shape shape-9" id="shape9"></div>
+            <div class="floating-shape shape-10" id="shape10"></div>
+            <div class="floating-shape shape-11" id="shape11"></div>
+            <div class="floating-shape shape-12" id="shape12"></div>
+            <div class="floating-shape shape-13" id="shape13"></div>
+            <div class="floating-shape shape-14" id="shape14"></div>
+            <div class="floating-shape shape-15" id="shape15"></div>
+            <div class="floating-shape shape-16" id="shape16"></div>
+            <div class="floating-shape shape-17" id="shape17"></div>
+            <div class="floating-shape shape-18" id="shape18"></div>
+        </div>
+    </section>
+
+    
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Get to know me better</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        I am a BCA student passionate about software development and problem solving. 
+                        I love building creative, efficient, and scalable solutions. My focus is on 
+                        becoming a skilled full-stack developer.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>3+</h3>
+                            <p>Years Learning</p>
+                        </div>
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p>Projects Built</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Technologies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="images/DiwakarMehndiratta.jpg" alt="Diwakar Mehndiratta" class="about-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Technologies I work with</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-cuttlefish"></i>
+                            <span>C</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-cuttlefish"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Web Technologies</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>Express.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Database</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Cursore</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education & Learning Journey</h2>
+                <p class="section-subtitle">Building the foundation for my tech career</p>
+            </div>
+            <div class="education-content">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-details">
+                        <div class="degree-badge">
+                            <span class="badge-text">BCA</span>
+                        </div>
+                        <h3 class="degree-title">Bachelor of Computer Applications</h3>
+                        <p class="institution">
+                            <i class="fas fa-university"></i>
+                            Allenhouse Institute of Technology
+                        </p>
+                        <div class="duration-container">
+                            <span class="duration-badge">
+                                <i class="fas fa-calendar-alt"></i>
+                                2023 - 2026
+                            </span>
+                            <span class="status-badge current">Currently Pursuing</span>
+                        </div>
+                        <div class="education-description">
+                            <p>Currently pursuing BCA with focus on software development, data structures, and web technologies.</p>
+                        </div>
+                        <div class="education-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-book"></i>
+                                <span>Core Subjects</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-code"></i>
+                                <span>Programming</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-database"></i>
+                                <span>Database</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-globe"></i>
+                                <span>Web Dev</span>
+                            </div>
+                        </div>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>Academic Progress</span>
+                                <span class="progress-percentage">75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-width="75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional Learning Cards -->
+                <div class="learning-grid">
+                    <div class="learning-card">
+                        <div class="learning-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>Online Certifications</h4>
+                        <p>Web Development, Programming Fundamentals</p>
+                        <div class="learning-tags">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                        </div>
+                    </div>
+                    
+                    <div class="learning-card">
+                        <div class="learning-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h4>Practical Projects</h4>
+                        <p>Hands-on experience with real-world applications</p>
+                        <div class="learning-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Full-Stack</span>
+                        </div>
+                    </div>
+                    
+                    <div class="learning-card">
+                        <div class="learning-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>Collaborative Learning</h4>
+                        <p>Team projects and peer programming sessions</p>
+                        <div class="learning-tags">
+                            <span class="tag">Git</span>
+                            <span class="tag">Teamwork</span>
+                            <span class="tag">Agile</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/College Management System.jpg" alt="College Management System" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #6366f1, #8b5cf6); display: none; align-items: center; justify-content: center; height: 250px; color: white; font-size: 1.2rem; font-weight: 600;">
+                            <div style="text-align: center;">
+                                <i class="fas fa-graduation-cap" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                                <div>College Management System</div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/8303911836" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">College Management System</h3>
+                        <p class="project-description">A complete system for managing student data, faculty, and results built with Java and MySQL.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Swing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Personal Resume Website.jpg" alt="Personal Resume Website" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #8b5cf6, #a855f7); display: none; align-items: center; justify-content: center; height: 250px; color: white; font-size: 1.2rem; font-weight: 600;">
+                            <div style="text-align: center;">
+                                <i class="fas fa-globe" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                                <div>Personal Resume Website</div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/8303911836" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Personal Resume Website</h3>
+                        <p class="project-description">Responsive personal website built with HTML, CSS, and JavaScript.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Weather App.jpg" alt="Weather App" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #06b6d4, #0891b2); display: none; align-items: center; justify-content: center; height: 250px; color: white; font-size: 1.2rem; font-weight: 600;">
+                            <div style="text-align: center;">
+                                <i class="fas fa-cloud-sun" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                                <div>Weather App</div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/8303911836" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Weather App</h3>
+                        <p class="project-description">Fetches live weather data using React and external weather API.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">API</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Personal AI Assistant.jpg" alt="Personal AI Assistant" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #10b981, #059669); display: none; align-items: center; justify-content: center; height: 250px; color: white; font-size: 1.2rem; font-weight: 600;">
+                            <div style="text-align: center;">
+                                <i class="fas fa-robot" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                                <div>Personal AI Assistant</div>
+                            </div>
+                        </div>
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/8303911836" class="project-link"><i class="fab fa-github"></i></a>
+                                <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Personal AI Assistant</h3>
+                        <p class="project-description">Practice project with a chatbot in terminal and GUI built in Python. It stores all chat history and allows voice-based interaction. Both frontend and backend are developed in Python.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">Chatbot</span>
+                            <span class="tech-tag">GUI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">Learning by building in real environments</p>
+            </div>
+            <div class="experience-card">
+                <div class="exp-header">
+                    <div class="exp-logo">
+                        <img src="internshipcertification/growdlin_logo.jpeg" alt="Growdlin Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="logo-fallback">G</div>
+                    </div>
+                    <div class="exp-meta">
+                        <h3 class="exp-role">Technical Intern & Content Writer</h3>
+                        <div class="exp-company">Growdlin · <a href="https://www.linkedin.com/company/growdlin/" target="_blank" rel="noopener" class="exp-linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a></div>
+                        <div class="exp-duration"><i class="far fa-calendar"></i> May – Aug (4 Months)</div>
+                        <div class="exp-tags">
+                            <span class="exp-tag">Content Strategy</span>
+                            <span class="exp-tag">Technical Research</span>
+                            <span class="exp-tag">Social Media</span>
+                            <span class="exp-tag">Digital Initiatives</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="exp-body">
+                    <p class="exp-summary">
+                        At Growdlin, I worked at the intersection of technology and creativity. My role involved writing research-backed content, contributing to technical projects, and supporting digital initiatives. I also created impactful content pieces tailored for digital platforms, blending research with storytelling to engage the right audience.
+                    </p>
+                    <ul class="exp-points">
+                        <li class="exp-item">Led a LinkedIn project: planned, wrote, and published content improving digital presence.</li>
+                        <li class="exp-item">Transformed ideas into structured strategies aligned with business goals.</li>
+                        <li class="exp-item">Communicated clearly with stakeholders and applied technical insights to real problems.</li>
+                    </ul>
+                </div>
+                <div class="exp-footer">
+                    <div class="exp-certificate">
+                        <div class="cert-thumb">
+                            <img src="internshipcertification/complete internship.jpg" alt="Growdlin Internship Certificate" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="cert-fallback"><i class="fas fa-certificate"></i></div>
+                        </div>
+                        <div class="cert-info">
+                            <div class="cert-title">Internship Certificate</div>
+                            <div class="cert-note">Completed 4 months successfully (May – Aug)</div>
+                        </div>
+                        <a class="btn btn-secondary exp-view" href="internshipcertification/complete internship.jpg">View</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal for Certificates -->
+    <div id="imageModal" class="image-modal" aria-hidden="true">
+        <div class="image-modal-backdrop"></div>
+        <div class="image-modal-content">
+            <button class="modal-close" aria-label="Close">&times;</button>
+            <img id="modalImage" src="" alt="Certificate Preview">
+        </div>
+    </div>
+
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>tarunmahndirata@email.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p><a href="https://www.linkedin.com/in/diwakar-mehndiratta-694988375" target="_blank" style="color: #6366f1; text-decoration: none;">Connect with me</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h3>GitHub</h3>
+                            <p><a href="https://github.com/8303911836" target="_blank" style="color: #6366f1; text-decoration: none;">View my code</a></p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            
+            
+            
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Diwakar Mehndiratta. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/diwakar-mehndiratta-694988375" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/8303911836" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
